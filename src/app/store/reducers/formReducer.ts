@@ -19,6 +19,7 @@ const initialState: FormState = {
 const formReducer = (state = initialState, action: { type: string; payload?: Partial<FormState> }) => {
   switch (action.type) {
     case UPDATE_FORM:
+      
       return { ...state, ...action.payload };
     case RESET_FORM:
       return initialState;
